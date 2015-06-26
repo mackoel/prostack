@@ -14,6 +14,7 @@ Source0:        http://sourceforge.net/projects/prostack/files/%{name}-%{version
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 #BuildRequires: java-1.6.0-sun-devel
+BuildRequires: java-1.8.0-openjdk-devel
 BuildRequires: tetex-tex4ht
 BuildRequires: goocanvas-devel
 BuildRequires: gtk2-devel
