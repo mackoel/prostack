@@ -45,6 +45,7 @@ BuildRequires: texlive-collection-pictures
 BuildRequires: texlive-ifsym
 BuildRequires: texlive-latex-fonts
 BuildRequires: texlive-ltxtools
+BuildRequires: ImageMagick
 
 Requires: glib2
 Requires: libtiff
