@@ -35,6 +35,16 @@ BuildRequires: libtool
 BuildRequires: intltool
 BuildRequires: perl-XML-Parser
 BuildRequires: pkgconfig
+BuildRequires: texlive-collection-latex
+BuildRequires: texlive-collection-latexextra
+BuildRequires: texlive-collection-latexrecommended
+BuildRequires: texlive-collection-htmlxml
+BuildRequires: texlive-collection-langenglish
+BuildRequires: texlive-collection-langeuropean
+BuildRequires: texlive-collection-pictures
+BuildRequires: texlive-ifsym
+BuildRequires: texlive-latex-fonts
+BuildRequires: texlive-ltxtools
 
 Requires: glib2
 Requires: libtiff
