@@ -10,7 +10,8 @@ Group:          Graphics
 License:        GPLv3
 URL:            http://prostack.sourceforge.net/
 Source0:        http://sourceforge.net/projects/prostack/files/%{name}-%{version}.tgz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+#BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 BuildRequires: java-1.6.0-sun-devel
 BuildRequires: tetex-tex4ht
