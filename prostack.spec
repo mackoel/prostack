@@ -2,7 +2,7 @@
 %global prostackserverhome /var/www/prostack
 
 Name:           prostack
-Version:        6.3.0
+Version:        6.4.0
 Release:        0%{?dist}
 Summary:        ProStack common part
 
@@ -62,6 +62,7 @@ Requires: gsl
 Requires: gts
 Requires: fftw
 Requires: opencv
+Requires: R
 
 %description
 ProStack is the Image Processing Platform that allows to build complex scenarios
@@ -135,7 +136,7 @@ rm -rf %{buildroot}
 
 d=`pwd`
 
-for f in door prostak quastack glaz prostack iapee cmove prutik psocv rascon
+for f in door prostak quastack glaz prostack iapee cmove prutik psocv rascon frameproc
 do
 	cd $f
 	autoreconf -fi
@@ -267,11 +268,21 @@ fi
 %{_bindir}/prostak
 %{_bindir}/psocv
 %{_bindir}/psocvp
+%{_bindir}/frame_proc_cell_rm
+%{_bindir}/frame_proc_clust
+%{_bindir}/frame_proc_filt
+%{_bindir}/frame_proc_xcells
+%{_bindir}/series_proc_summary
+%{_bindir}/frame_proc_cells
+%{_bindir}/frame_proc_clust_k
+%{_bindir}/frame_proc_obj
+%{_bindir}/series_proc_xsummary
 %doc %{_docdir}/cmove
 %doc %{_docdir}/door
 %doc %{_docdir}/prostak
 %doc %{_docdir}/psocv
 %doc %{_docdir}/quastack
+%doc %{_docdir}/frameproc
 %{_libdir}/libdoor.so
 %{_libdir}/libdoor.so.*
 %{_libdir}/libgrf.so
@@ -283,6 +294,7 @@ fi
 %{_datadir}/door/prostak-*
 %{_datadir}/door/quastak-*
 %{_datadir}/door/psocv-*
+%{_datadir}/door/frameproc-*
 
 %files desktop -f desktop.lang
 %defattr(-,root,root,-)
