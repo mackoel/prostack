@@ -17,6 +17,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: java-1.8.0-openjdk-devel
 BuildRequires: tetex-tex4ht
 BuildRequires: goocanvas-devel
+BuildRequires: liberation-mono-fonts
 BuildRequires: gtk2-devel
 BuildRequires: gtk3-devel
 BuildRequires: glib2-devel
