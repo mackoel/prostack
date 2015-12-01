@@ -2,7 +2,7 @@
 %global prostackserverhome /var/www/prostack
 
 Name:           prostack
-Version:        6.4.0
+Version:        6.5.0
 Release:        0%{?dist}
 Summary:        ProStack common part
 
@@ -277,6 +277,7 @@ fi
 %{_bindir}/frame_proc_cells
 %{_bindir}/frame_proc_clust_k
 %{_bindir}/frame_proc_obj
+%{_bindir}/frame_proc_polarplot
 %{_bindir}/series_proc_xsummary
 %doc %{_docdir}/cmove
 %doc %{_docdir}/door
@@ -382,6 +383,10 @@ fi
 %{_libdir}/libdoor.la
 
 %changelog
+
+* Tue Dec 01  2015 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 6.5.0
+
+- New version
 
 * Wed Sep 09  2015 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 6.3.0
 
