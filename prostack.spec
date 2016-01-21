@@ -2,7 +2,7 @@
 %global prostackserverhome /var/www/prostack
 
 Name:           prostack
-Version:        6.5.3
+Version:        7.0.0
 Release:        0%{?dist}
 Summary:        ProStack common part
 
@@ -216,15 +216,15 @@ fi
 if [ -d %{_datadir}/imagej/macros ]; then \
     cp %{_datadir}/prostack/fiji/ProStackMacro*.txt %{_datadir}/imagej/macros; \
 fi
-if [ -e %{_datadir}/door/kimono-db.db.en_US.utf8 ]; then \
-	cat %{_datadir}/door/prutik-db.en_US.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.utf8; \
-	cat %{_datadir}/door/glaz-db.en_US.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.utf8; \
-	cat %{_datadir}/door/iapee-db.en_US.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.utf8; \
+if [ -e %{_datadir}/door/kimono-db.db.en_US.UTF-8 ]; then \
+	cat %{_datadir}/door/prutik-db.en_US.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.UTF-8; \
+	cat %{_datadir}/door/glaz-db.en_US.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.UTF-8; \
+	cat %{_datadir}/door/iapee-db.en_US.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.UTF-8; \
 fi
-if [ -e %{_datadir}/door/kimono-db.db.ru_RU.utf8 ]; then \
-	cat %{_datadir}/door/prutik-db.ru_RU.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.utf8; \
-	cat %{_datadir}/door/glaz-db.ru_RU.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.utf8; \
-	cat %{_datadir}/door/iapee-db.ru_RU.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.utf8; \
+if [ -e %{_datadir}/door/kimono-db.db.ru_RU.UTF-8 ]; then \
+	cat %{_datadir}/door/prutik-db.ru_RU.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.UTF-8; \
+	cat %{_datadir}/door/glaz-db.ru_RU.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.UTF-8; \
+	cat %{_datadir}/door/iapee-db.ru_RU.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.UTF-8; \
 fi
 
 %postun desktop
@@ -239,19 +239,19 @@ if [ $1 -eq 0 ]; then \
 fi
 
 %post omero
-if [ -e %{_datadir}/door/kimono-db.db.en_US.utf8 ]; then \
-	cat %{_datadir}/door/omep-db.en_US.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.utf8; \
+if [ -e %{_datadir}/door/kimono-db.db.en_US.UTF-8 ]; then \
+	cat %{_datadir}/door/omep-db.en_US.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.UTF-8; \
 fi
-if [ -e %{_datadir}/door/kimono-db.db.ru_RU.utf8 ]; then \
-	cat %{_datadir}/door/omep-db.ru_RU.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.utf8; \
+if [ -e %{_datadir}/door/kimono-db.db.ru_RU.UTF-8 ]; then \
+	cat %{_datadir}/door/omep-db.ru_RU.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.UTF-8; \
 fi
 
 %post rascon
-if [ -e %{_datadir}/door/kimono-db.db.en_US.utf8 ]; then \
-	cat %{_datadir}/door/rascon-db.en_US.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.utf8; \
+if [ -e %{_datadir}/door/kimono-db.db.en_US.UTF-8 ]; then \
+	cat %{_datadir}/door/rascon-db.en_US.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.en_US.UTF-8; \
 fi
-if [ -e %{_datadir}/door/kimono-db.db.ru_RU.utf8 ]; then \
-	cat %{_datadir}/door/rascon-db.ru_RU.utf8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.utf8; \
+if [ -e %{_datadir}/door/kimono-db.db.ru_RU.UTF-8 ]; then \
+	cat %{_datadir}/door/rascon-db.ru_RU.UTF-8.sqlt3 | sqlite3 %{_datadir}/door/kimono-db.db.ru_RU.UTF-8; \
 fi
 
 %files -f door.lang
@@ -383,6 +383,10 @@ fi
 %{_libdir}/libdoor.la
 
 %changelog
+
+* Thu Jan 21  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.0
+
+- New version
 
 * Mon Dec 21  2015 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 6.5.3
 
