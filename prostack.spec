@@ -384,6 +384,10 @@ fi
 
 %changelog
 
+* Tue Feb 02  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.3
+
+- New version
+
 * Fri Jan 29  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.2
 
 - New version
