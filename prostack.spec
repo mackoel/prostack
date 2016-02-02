@@ -2,7 +2,7 @@
 %global prostackserverhome /var/www/prostack
 
 Name:           prostack
-Version:        7.0.2
+Version:        7.0.3
 Release:        0%{?dist}
 Summary:        ProStack common part
 
