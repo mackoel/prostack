@@ -2,7 +2,7 @@
 %global prostackserverhome /var/www/prostack
 
 Name:           prostack
-Version:        7.0.8
+Version:        7.0.10
 Release:        0%{?dist}
 Summary:        ProStack common part
 
@@ -383,6 +383,10 @@ fi
 %{_libdir}/libdoor.la
 
 %changelog
+
+* Tue May 17  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.10
+
+- New version
 
 * Fri Apr 29  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.8
 
