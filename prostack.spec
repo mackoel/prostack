@@ -279,7 +279,6 @@ fi
 %doc %{_docdir}/cmove
 %doc %{_docdir}/door
 %doc %{_docdir}/prostak
-%doc %{_docdir}/psocv
 %doc %{_docdir}/quastack
 %doc %{_docdir}/frameproc
 %{_libdir}/libdoor.so
@@ -380,9 +379,9 @@ fi
 
 %changelog
 
-* Tue Jul 26  2017 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.10
+* Wed Jul 26  2017 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.10
 
-- Fix deps for F25-26
+- Fix deps for F25-26 and removed psocv
 
 * Tue May 17  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.10
 
