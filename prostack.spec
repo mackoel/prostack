@@ -13,7 +13,6 @@ Source0:        http://sourceforge.net/projects/prostack/files/%{name}-%{version
 #BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
-#BuildRequires: java-1.6.0-sun-devel
 BuildRequires: java-1.8.0-openjdk-devel
 BuildRequires: tetex-tex4ht
 BuildRequires: goocanvas-devel
@@ -31,7 +30,7 @@ BuildRequires: httpd-devel
 BuildRequires: gsl-devel
 BuildRequires: gts-devel
 BuildRequires: fftw-devel
-BuildRequires: opencv-devel
+BuildRequires: atlas
 BuildRequires: libtool
 BuildRequires: intltool
 BuildRequires: perl-XML-Parser
@@ -63,7 +62,6 @@ Requires: curl
 Requires: gsl
 Requires: gts
 Requires: fftw
-Requires: opencv
 Requires: R
 
 %description
@@ -138,7 +136,7 @@ rm -rf %{buildroot}
 
 d=`pwd`
 
-for f in door prostak quastack glaz prostack iapee cmove prutik psocv rascon frameproc
+for f in door prostak quastack glaz prostack iapee cmove prutik rascon frameproc
 do
 	cd $f
 	autoreconf -fi
@@ -268,8 +266,6 @@ fi
 %{_bindir}/nplot2.pl
 %{_bindir}/nplot3.pl
 %{_bindir}/prostak
-%{_bindir}/psocv
-%{_bindir}/psocvp
 %{_bindir}/frame_proc_cell_rm
 %{_bindir}/frame_proc_clust
 %{_bindir}/frame_proc_filt
@@ -296,7 +292,6 @@ fi
 %{_datadir}/door/cmove-*
 %{_datadir}/door/prostak-*
 %{_datadir}/door/quastak-*
-%{_datadir}/door/psocv-*
 %{_datadir}/door/frameproc-*
 
 %files desktop -f desktop.lang
