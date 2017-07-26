@@ -37,6 +37,7 @@ BuildRequires: intltool
 BuildRequires: perl-XML-Parser
 BuildRequires: pkgconfig
 BuildRequires: texlive-collection-latex
+BuildRequires: texlive-preview
 BuildRequires: texlive-collection-latexextra
 BuildRequires: texlive-collection-latexrecommended
 BuildRequires: texlive-collection-htmlxml
@@ -383,6 +384,10 @@ fi
 %{_libdir}/libdoor.la
 
 %changelog
+
+* Tue Jul 26  2017 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.10
+
+- Fix deps for F25-26
 
 * Tue May 17  2016 Konstantin Kozlov <kozlov_kn@spbstu.ru> - 7.0.10
 
